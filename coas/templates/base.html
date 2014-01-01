@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ STATIC_URL }}lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <img class="pull-left" src="http://oxfordshirearchery.org/static/img/logo.jpg">
+                <h1>County of Oxfordshire Archery Society</h1>
+                <ul class="nav nav-pills">
+                    <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'clubs' %}">Clubs</a></li>
+                    <li><a href="">Archers</a></li>
+                    <li><a href="">Tournaments</a></li>
+                    <li><a href="">Records</a></li>
+                    <li><a href="http://www.teamshopbuilder.co.uk/countyofoxfordshirearcherysociety/">Shop</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <small>© County of Oxford Archery Society</small>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        {% block scripts %}
+        {% endblock %}
+    </body>
+</html>

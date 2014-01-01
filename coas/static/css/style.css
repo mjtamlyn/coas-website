@@ -1,0 +1,21 @@
+header {
+    background-color: #111111;
+}
+header h1 {
+    color: #fedb01;
+}
+header img {
+    width: auto;
+    margin: 20px;
+}
+
+.inline-img {
+    width: 350px;
+    margin: 10px 20px 20px;
+}
+
+footer {
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}

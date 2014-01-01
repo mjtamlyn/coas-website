@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load mdcontent %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <img src="https://scontent-a-lhr.xx.fbcdn.net/hphotos-prn1/1520623_10153634869285385_1745648700_n.jpg" class="img-rounded pull-right inline-img">
+        {% block main_content %}
+        {% mdcontent 'markdown/home.md' %}
+        {% endblock %}
+    </div>
+    <div class="col-md-4">
+        <div class="fb-like-box" data-href="http://www.facebook.com/OxfordshireArchery" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=109553769137853";
+              fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));</script>
+{% endblock %}
